@@ -8,7 +8,7 @@ void display(char *path) {
 
     if (fptr == NULL) {
         printf("The file is not opened.");
-        exit(2)
+        exit(2);
     }
 
 }
