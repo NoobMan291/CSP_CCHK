@@ -1,12 +1,12 @@
 CC = gcc
-CFLAGS = -g -std=c99 -pedantic -Werror -Wall -Wextra -Wvla -fsanitize=address
+CFLAGS = -g -std=c99 -Werror -Wall -Wextra -Wvla -fsanitize=address
 CPPFLAGS = -Isrc/display
 LDFLAGS = -fsanitize=address
 
 OBJS = src/main.o \
 	src/display/display.o
 
-all: $(OBJS) 
+all: clean $(OBJS) 
 	$(CC) $(CFLAGS) -o csp $(OBJS)
 
 clean:
